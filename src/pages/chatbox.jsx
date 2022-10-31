@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { io } from "socket.io-client";
 import { useNavigate } from "react-router-dom";
 import Loading from "../components/loading";
-const socket = io("https://simple-react-chat-app.vercel.app/", { port: 3001 });
+const socket = io("https://simple-react-chat-app.vercel.app", { port: 3001 });
 export default function Chatbox() {
   const [loading, setLoading] = useState(false);
   const [messages, setMessages] = useState([]);
