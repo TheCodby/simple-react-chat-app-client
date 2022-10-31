@@ -1,4 +1,3 @@
-require("dotenv").config();
 import React, { Fragment, useLayoutEffect } from "react";
 import { AiOutlineSend } from "react-icons/ai";
 import Messages from "../components/messages";
@@ -7,7 +6,7 @@ import { useEffect } from "react";
 import { io } from "socket.io-client";
 import { useNavigate } from "react-router-dom";
 import Loading from "../components/loading";
-const socket = io(process.env.SOCKET_URL, { port: 3001 });
+const socket = io("https://simple-react-chat-app.vercel.app/", { port: 3001 });
 export default function Chatbox() {
   const [loading, setLoading] = useState(false);
   const [messages, setMessages] = useState([]);
