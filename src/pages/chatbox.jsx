@@ -1,3 +1,4 @@
+require("dotenv").config();
 import React, { Fragment, useLayoutEffect } from "react";
 import { AiOutlineSend } from "react-icons/ai";
 import Messages from "../components/messages";
